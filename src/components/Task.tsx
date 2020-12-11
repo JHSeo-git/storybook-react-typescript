@@ -29,7 +29,12 @@ const Task: React.FC<Props> = ({
           disabled={true}
           name="checked"
         />
-        <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />
+        <span
+          className="checkbox-custom"
+          onClick={() => {
+            id && onArchiveTask(id);
+          }}
+        />
       </label>
       <div className="title">
         <input
@@ -42,7 +47,11 @@ const Task: React.FC<Props> = ({
 
       <div className="actions" onClick={(event) => event.stopPropagation()}>
         {state !== 'TASK_ARCHIVED' && (
-          <a onClick={() => onPinTask(id)}>
+          <a
+            onClick={() => {
+              id && onPinTask(id);
+            }}
+          >
             <span className={`icon-star`} />
           </a>
         )}
