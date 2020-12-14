@@ -6,6 +6,7 @@ import Task, { Props } from './Task';
 export default {
   component: Task,
   title: 'Task',
+  parameters: { assets: ['designs/items.png'] },
 } as Meta;
 
 const Template: Story<Props> = (args) => <Task {...args} />;
