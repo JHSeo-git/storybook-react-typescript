@@ -42,7 +42,7 @@ const Task: React.FC<Props> = ({
           value={title}
           readOnly={true}
           placeholder="Input title"
-          style={{ background: 'red' }}
+          style={{ textOverflow: 'ellipsis' }}
         />
       </div>
 
